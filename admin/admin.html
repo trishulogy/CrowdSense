@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Admin Panel</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adminstyles.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to the Admin Panel</h1>
-  </header>
-  <main>
-    <p>Content goes here...</p>
-  </main>
-  <footer>
-    <p>&copy; 2023 CrowdSense</p>
-  </footer>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>CodzSword</h2>
+      <ul>
+        <li onclick="showTab('dashboard')">Dashboard</li>
+        <li onclick="showTab('profile')">Profile</li>
+        <li onclick="showTab('task')">Task</li>
+        <li onclick="showTab('auth')">Auth</li>
+        <li onclick="showTab('settings')">Settings</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div id="dashboard" class="tab active">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to the dashboard overview.</p>
+      </div>
+      <div id="profile" class="tab">
+        <h1>Profile</h1>
+        <p>User profile info goes here.</p>
+      </div>
+      <div id="task" class="tab">
+        <h1>Tasks</h1>
+        <p>Task management content.</p>
+      </div>
+      <div id="auth" class="tab">
+        <h1>Auth</h1>
+        <p>Authentication & login info.</p>
+      </div>
+      <div id="settings" class="tab">
+        <h1>Settings</h1>
+        <p>Configure your dashboard preferences.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
