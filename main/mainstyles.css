@@ -317,3 +317,62 @@ main p {
     font-size: 14px;
   }
 }
+
+.image-scroller-section {
+  padding: 20px;
+  background-color: rgb(5, 0, 35);
+}
+
+.scroller-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.image-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.image-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scroller-image {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background-color: #fff;
+}
